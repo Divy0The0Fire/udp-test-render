@@ -14,4 +14,4 @@ COPY . /app
 EXPOSE 5000/udp
 
 # Run the application
-CMD ["python", "server.py"]
+CMD ["python", "main.py"]

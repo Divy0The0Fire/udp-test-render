@@ -1,0 +1,11 @@
+services:
+  - type: web  # Render treats Docker containers as web services by default, but UDP will work
+    name: udp-server
+    env: docker
+    plan: free  # Choose the plan that fits your requirements
+    dockerfilePath: ./Dockerfile  # Path to your Dockerfile
+    autoDeploy: true
+    ports:
+      - type: udp  # Define UDP port
+        port: 5000
+        protocol: udp
